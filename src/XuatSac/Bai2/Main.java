@@ -27,12 +27,10 @@ public class Main {
                 selectedFactory = new WebsiteFactory();
         }
 
-        // Giả lập tạo đơn hàng
         Customer customer = new Customer("Kha IT", "kha@dev.com", "09xx");
         Order order = new Order("ORD-999", customer);
         order.addItem(new OrderItem(new Product("P1", "Laptop", 20000000, "IT"), 1));
 
-        // Xử lý đơn hàng dựa trên kênh đã chọn
         service.processOrder(order, selectedFactory);
     }
 }
